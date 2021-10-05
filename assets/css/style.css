@@ -1,0 +1,66 @@
+:root{
+    --border-width: 3px;
+
+
+}
+.textareas {
+
+
+    width: 75%;
+    border: 15px solid rgb(160, 109, 119);
+    padding: 50px;
+    margin: 50px;
+    animation: myanim 3s infinite;
+    
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Lato, sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: white;
+    background:rgb(161, 238, 161);
+    border-radius: var(--border-width);
+}
+
+
+
+.pictureelement{
+    
+    width: 75%;
+    border: 7px solid rgb(160, 109, 119);
+    padding: 60px;
+    margin: 60px;
+    animation: myanim 3s infinite;
+    
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Lato, sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: white;
+    background:rgb(161, 238, 161);
+    border-radius: var(--border-width);
+
+}
+header {
+    font-size: 4rem;
+}
+p:hover{ font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    }
+
+body {
+    background:whitesmoke;
+  }
+  
+
+// gradient: https://www.gradientmagic.com/collection/rainbowstandard
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+
+
