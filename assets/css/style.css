@@ -1,66 +1,450 @@
-:root{
-    --border-width: 3px;
+/********************************************************************************
+CSS TABLE OF CONTENTS
+===== Base ====
+    |-- 1.0 - Reset
+    |-- 2.0 - Gobal
+    |-- 3.0 - Navbar
+    |-- 4.0 - About
+    |-- 5.0 - Project
+    |-- 6.0 - Footer
+    |-- 7.0 - Responsive
+********************************************************************************/
 
 
+/********************************** 1.0 - Reset ********************************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
 }
-.textareas {
 
-
-    width: 75%;
-    border: 15px solid rgb(160, 109, 119);
-    padding: 50px;
-    margin: 50px;
-    animation: myanim 3s infinite;
-    
-
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Lato, sans-serif;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    color: white;
-    background:rgb(161, 238, 161);
-    border-radius: var(--border-width);
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
-
-
-
-.pictureelement{
-    
-    width: 75%;
-    border: 7px solid rgb(160, 109, 119);
-    padding: 60px;
-    margin: 60px;
-    animation: myanim 3s infinite;
-    
-
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Lato, sans-serif;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    color: white;
-    background:rgb(161, 238, 161);
-    border-radius: var(--border-width);
-
-}
-header {
-    font-size: 4rem;
-}
-p:hover{ font-size: 20px;
-    transition: all 0.3s ease-in-out;
-    }
 
 body {
-    background:whitesmoke;
-  }
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/***************************** 2.0 - Global ******************************/
+* {
+  font-family: "QuickSand";
+  box-sizing: border-box; 
+  padding: 0;
+  margin:0; 
   
+}
 
-/* // gradient: https://www.gradientmagic.com/collection/rainbowstandard */ /* see if you can determine location of link and function*/
-@import url("https://fonts.googleapis.com/css?family=Lato:300");
+body, 
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: rgb(246, 252, 252);
+}
+
+.layers {
+  position:relative;
+  width: 100px;
+  height: 100px;
+}
+
+.layer {
+  background-color: rgb(0, 0, 0, 0.95);
+  z-index: 10;
+  position:absolute;
+  top:0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
 
 
+/******************************* 3.0 Navbar ***************************/
+.nav_section { 
+  background-image:linear-gradient(to top, rgb(255, 255, 255) , rgb(95, 110, 114));
+  border-right: rgb(45, 70, 68) .55em solid;
+  border-left: rgb(45, 70, 68) .55em solid;
+  border-bottom: rgb(45, 70, 68) .15em solid;
+  top: 0;
+  height: 4em;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  box-shadow:20px 20px 50px grey;  
+}
+
+.nav_section ul {
+  display: flex;
+}
+
+.nav_section li  {
+  padding: .2em 2.5em;
+  margin: 1.5em 1em;
+  font-size: 1.2em;
+  border:rgba(20, 20, 20, 0) solid 2px;
+}
+
+.nav_section  a:link, a:visited {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  text-align: center;
+}
+
+.nav_section  a:hover, a:active {
+  text-decoration: underline;
+}
+
+
+/******************************* 4.0 - Hero ***************************/
+.carousel-indicators {
+  margin: 0;
+  padding: 2em;
+}
+
+.carousel-indicators li {
+  padding: 0, 2em, 3em;
+  height: 1em;
+  width: 2em;
+}
+
+.img-fluid {
+  margin-top: 4em;
+  height: 45em;
+  width: 100%;
+  border-bottom: 0.5em solid rgb(0, 0, 0);
+}
+
+.btn {
+  background-color: rgba(170, 219, 217, 0.767);
+  border: 2px solid rgb(27, 46, 49);
+  margin: 0.5em, 10em;
+  padding: 1.5em;
+}
+
+.hero_button {
+  padding: 3em;
+}
+
+.hero_inner_element {
+  padding:2em;
+}
+
+.hero_title {
+  font-size: 5em;
+  padding:2em;
+}
+
+
+/******************************* 5.0 - Quiz ***************************/
+.drink_of_day_title, .team_title {
+  padding: 0 0 0 3em;
+  background-image:linear-gradient(to right, rgba(255, 255, 255, 0.925) , rgba(156, 170, 173, 0.514), rgb(255, 255, 255, 0.925));
+  border-bottom: 1px black solid;
+  box-shadow: black ;
+  border-left: 1px black solid;
+  border-right: 4px black solid; 
+  width: 80%;
+  margin: 6em auto 2em;
+}
+
+.drink_of_day_title, .team_title p {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 100;
+  padding: .5em 1em .5em 1em;
+}
+
+.drinks_of_day {
+  margin: 4em 3em 7em;
+  display: flex;
+  justify-content: center;
+}
+
+.drink_of_day_section, .about_us_section {
+  border-top:rgb(110, 185, 179) 2px solid;
+  border-bottom:rgb(97, 168, 162) .95em solid; 
+  margin: 3em 2em;
+  padding: 2em 1em;
+  width: 18rem;
+}
+
+.drink_of_day_label {
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+
+/******************************* 5.0 - Quiz ***************************/
+#quiz_background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 30em;
+  background-image: url(../images/body.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1em 2em;
+  background-color: rgba(255, 255, 255, 0.349);
+  background-blend-mode: multiply;
+}
+
+/* The two selectors below add style to the name area*/
+.card_element {
+  background-color: rgba(0, 0, 0, 0.048);
+  border-radius: 10%;
+  border-top:rgb(110, 185, 179) 2px solid;
+  border-bottom:rgb(97, 168, 162) .95em solid; 
+
+  margin: 1em auto 1em;
+  padding: 2em 1em;
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.quiz_background h2 {
+  padding: 2em 3em 1em;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 2;
+  text-align: center;
+}
+
+.welcome {
+  width: 90%;
+  justify-content: center;
+}
+
+.start {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.start_button {
+  justify-items: center;
+  font-size: 1.2em;
+  background-color: rgba(255, 255, 255, 0.959);
+  text-align: center;
+  padding: .4em 2em;
+  width: 40%;
+  border-radius: 10%;
+  border-bottom: 10px black solid;
+}
+
+.start_button:hover {
+  background-color: rgb(221, 212, 221);
+  cursor: pointer;
+}
+
+.info_container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.timer .counter .score {
+  font-size: 1.2em;
+  width: 33.3%;
+  justify-content: center;
+  border-radius: 10%;
+  border-bottom: 4px black solid;
+  font-weight:600;
+}
+
+.quiz_container {
+  width: 100%;
+}
+
+#question_container {
+  display:flex;
+  bottom: 0;
+  margin: 2em 1em 0em;
+}
+
+.question_prefix {
+  flex-direction: column;
+  flex-wrap:wrap;
+  width: 25%;
+  font-size: 1.5em;
+  font-weight: 700;
+  align-content: center;
+  justify-content: flex-end;
+}
+
+.question {
+  flex-direction: column;
+  flex-wrap:wrap;
+  width: 75%;
+  justify-content: flex-start;
+  align-content: center;
+  font-size: 1.4em;
+}
+
+.answer_container {
+  font-size: 1em;
+  background-color: rgba(255, 255, 255, 0.9592);
+  /* background-image:linear-gradient(to right, rgb(255, 255, 255) , rgb(168, 144, 160)); */
+  padding: .3em 1em;
+  border-radius: 10%;
+  border-bottom: 7px black solid;
+  width: 90%;
+  text-align:left;
+  height: 2.2em;
+  margin:1em.7em;
+  display: flex;
+  display: column;
+}
+
+.answer_button {
+  justify-content: flex-start;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  background-color: transparent;
+}
+
+.answer_container:hover {
+  background-color: rgb(221, 212, 221);
+  cursor: pointer;
+}
+
+.answer_container:active {
+  box-shadow: 0 4px rgb(53, 51, 51);
+  transform: translateY(2px);
+  cursor: pointer;
+}
+
+
+
+#scoreboard_container {
+
+}
+
+.hidden {
+  display: none;
+}
+
+
+/******************************* 5.0 - Form ****************************/
+.card_tab_section {
+  margin:10em 5em 5em;
+
+}
+
+.tab_section_body {
+  height: 30em;
+}
+
+
+/******************************* 5.0 - About ***************************/
+.about_section_header {
+  background-image: url('../images/about_us.jpg');
+  height: 100%;
+  width: 100%;
+  height: 20em;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about_section_header p {
+  color: rgb(255, 255, 255);
+  font-size: 10em;
+}
+
+.about_card_group {
+  margin: 5em 3em 10em;
+}
+
+.about_us_img {
+  height: 30em;
+}
+
+
+/******************************* 4.0 - Footer ***************************/
+footer {
+  background-image:linear-gradient(to bottom, rgb(255, 255, 255) , rgba(95, 110, 114, 0.548));
+  border-top: rgb(3, 3, 3) 0.15em solid;
+  border-right: rgb(3, 3, 3) .5em solid;
+  border-left: rgb(3, 3, 3) .5em solid;
+  width: 100%;
+  height: 2.8em;
+  padding: 0;
+  bottom: 0;
+  justify-content: space-evenly;
+}
+
+footer ul {
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-evenly;
+  color: rgb(0, 0, 0);
+  font-size: 1.05em;
+  padding: 1em .5em .5em .5em ;
+}
+
+footer a:link, a:visited {
+  color: rgb(14, 32, 48);
+  text-decoration: none;
+  text-align: center;
+}
+
+footer a:hover, a:active {
+  background-color: rgba(255, 255, 255, 0);
+  text-decoration: underline black 2px;
+}
