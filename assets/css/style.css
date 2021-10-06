@@ -182,6 +182,7 @@ html {
   padding:2em;
 }
 
+
 /******************************* 5.0 - Quiz ***************************/
 .drink_of_day_title, .team_title {
   padding: 0 0 0 3em;
@@ -367,13 +368,7 @@ html {
   cursor: pointer;
 }
 
-.correct {
-  background-color: rgb(20, 220, 153);
-}
 
-.incorrect {
-  background-color: crimson;
-}
 
 #scoreboard_container {
 
@@ -386,8 +381,12 @@ html {
 
 /******************************* 5.0 - Form ****************************/
 .card_tab_section {
-  margin:3em;
+  margin:10em 5em 5em;
 
+}
+
+.tab_section_body {
+  height: 30em;
 }
 
 
@@ -413,6 +412,7 @@ html {
 .about_us_img {
   height: 30em;
 }
+
 
 /******************************* 4.0 - Footer ***************************/
 footer {

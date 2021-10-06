@@ -23,40 +23,36 @@ const restartButtonEl = document.querySelector(".restart_button");
 
 
 function startQuiz () {
-    score = 0;
-    counter = 0
-    timeRemaining = 80;
-    startButtonEl.classList.add('hidden');
-    welcomeContainer.classList.add('hidden');
-    infoContainer.classList.remove('hidden');
-    quizContainer.classList.remove('hidden');
-    scoreboardContainer.classList.add('hidden');
-    generateQuestions ();
-    startTimer ();
-    startScoreBoard (); 
+  startButtonEl.classList.add('hidden');
+  welcomeContainer.classList.add('hidden');
+  infoContainer.classList.remove('hidden');
+  quizContainer.classList.remove('hidden');
+  scoreboardContainer.classList.add('hidden');
+  generateQuestions ();
+  startTimer ();
+  startScoreBoard (); 
 }
 
 
 
 
 
-
 ///////////////////////////////////////////////Bentura////////////////////////////////////////
-  // Selectors 
-  var timerArea = document.getElementById("timer-area");
+// Selectors 
+var timerArea = document.getElementById("timer-area");
   
   
-  // Global variables 
-  var timerInterval;
-  var secondsRemaining = 60;
+// Global variables 
+var timerInterval;
+var secondsRemaining = 60;
   
-  //timer for quiz 
-  function startTimer(){
-    timerInterval = setInterval( function(){
-      timerArea.textContent = secondsRemaining + " seconds left";
-      secondsRemaining--;
+//timer for quiz 
+function startTimer(){
+  timerInterval = setInterval( function(){
+    timerArea.textContent = secondsRemaining + " seconds left";
+    secondsRemaining--;
   
-      if( secondsRemaining <0 ){
+    if( secondsRemaining <0 ){
         clearInterval(timerInterval);
         checkForWonGame();
       }
@@ -66,149 +62,128 @@ function startQuiz () {
    
    
   
-   const questions = [
-      {
-  
-  
-      question: "What is the name of a coffee drink containing whiskey?",
-      optionA: "A Spanish coffee",
-      optionB: "A Russian coffee",
-      optionC: "An Irish coffee",
-      optionD: "None of the above",
-      correctOption: "optionC"
-  },
-  
+const questions = [
   {
-      question: "What temperature should you taste gin?",
-      optionA: "Room temperature",
-      optionB: "Really cold",
-      optionC: "Super hot",
-      optionD: "Boiling hot",
-      correctOption: "optionA"
-  },
-  
-  
-  {
-      question: "Where does vodka orinate from?",
-      optionA: "Spain",
-      optionB: "Portugal",
-      optionC: "Japan",
-      optionD: "Poland",
-      correctOption: "optionD"
-  },
-  
-  {
-      question: "Where does the majority of the world's rum come from?",
-      optionA: "Canada",
-      optionB: "Puerto Rico",
-      optionC: "Brazil",
-      optionD: "Ethiopia",
-      correctOption: "optionB"
-  },
-  
-  {
-      question: "What is the name of a virgin cocktail?",
-      optionA: "A frogtail",
-      optionB: "A mocktail",
-      optionC: "A tail",
-      optionD: "A bigtail",
-      correctOption: "optionB"
-  },
-  
-  {
-      question: "Whst cocktail is garnished with an olive?",
-      optionA: "Canada",
-      optionB: "Puerto Rico",
-      optionC: "Brazil",
-      optionD: "Ethiopia",
-      correctOption: "optionC"
-  },
-  
-  {
-      question: "A Sex on the Beach cocktail without orange is called?",
-      optionA: "Canada",
-      optionB: "Woo Woo",
-      optionC: "Coo Coo",
-      optionD: "Choo Choo",
-      correctOption: "optionB"
-  },
-  
-  
-  {
-      question: "Where does the Mojito originate from?",
-      optionA: "Africa",
-      optionB: "Australia",
-      optionC: "Brazil",
-      optionD: "Cuba",
-      correctOption: "optionD"
+    question: "What is the name of a coffee drink containing whiskey?",
+    optionA: "A Spanish coffee",
+    optionB: "A Russian coffee",
+    optionC: "An Irish coffee",
+    optionD: "None of the above",
+    correctOption: "optionC"
   },
   {
-      question: "Which cocktail shares its name with a fancy piece of clothing?",
-      optionA: "Scarf",
-      optionB: "Shoes",
-      optionC: "Necklace",
-      optionD: "Tuxedo",
-      correctOption: "optionD"
+    question: "What temperature should you taste gin?",
+    optionA: "Room temperature",
+    optionB: "Really cold",
+    optionC: "Super hot",
+    optionD: "Boiling hot",
+    correctOption: "optionA"
   },
-  
   {
-      question: "From which country is Pisco Sour?",
-      optionA: "Columbia",
-      optionB: "Peru",
-      optionC: "Brazil",
-      optionD: "Mexico",
-      correctOption: "optionB"
+    question: "Where does vodka orinate from?",
+    optionA: "Spain",
+    optionB: "Portugal",
+    optionC: "Japan",
+    optionD: "Poland",
+    correctOption: "optionD"
   },
-  
   {
-      question: "A John Collins is a blank kind of drink?",
-      optionA: "long",
-      optionB: "medium",
-      optionC: "short",
-      optionD: "extra short",
-      correctOption: "optionA"
+    question: "Where does the majority of the world's rum come from?",
+    optionA: "Canada",
+    optionB: "Puerto Rico",
+    optionC: "Brazil",
+    optionD: "Ethiopia",
+    correctOption: "optionB"
   },
-  
-  
   {
-      question: "What is a Mimosa made of?",
-      optionA: "Apple juice and Orange juice",
-      optionB: "Orange Juice and Gin",
-      optionC: "Orange juice and Champagne",
-      optionD: "Campange and Apple juice",
-      correctOption: "optionC"
+    question: "What is the name of a virgin cocktail?",
+    optionA: "A frogtail",
+    optionB: "A mocktail",
+    optionC: "A tail",
+    optionD: "A bigtail",
+    correctOption: "optionB"
   },
-  
   {
-      question: "What is a White Lady made of",
-      optionA: "Cognac, orange liqueur and lemon juice",
-      optionB: "Fresh Mint,Lime juice, Rum and Brown sugar",
-      optionC: "Sugar, spice and everything nice",
-      optionD: "Gin, Triple sec or cointreau, lemon juice and egg white",
-      correctOption: "optionD"
+    question: "Whst cocktail is garnished with an olive?",
+    optionA: "Canada",
+    optionB: "Puerto Rico",
+    optionC: "Brazil",
+    optionD: "Ethiopia",
+    correctOption: "optionC"
   },
-  
   {
-      question: "What is the official cocktail of New Orleans",
-      optionA: "Sazerac",
-      optionB: "Margarita",
-      optionC: "Rusty Nail",
-      optionD: "Stinger",
-      correctOption: "optionA"
+    question: "A Sex on the Beach cocktail without orange is called?",
+    optionA: "Canada",
+    optionB: "Woo Woo",
+    optionC: "Coo Coo",
+    optionD: "Choo Choo",
+    correctOption: "optionB"
   },
-  
   {
-      question: "Which is Brazil's national cocktail",
-      optionA: "Margarita",
-      optionB: "La lluvia",
-      optionC: "Caipiriha",
-      optionD: "Martini",
-      correctOption: "optionC"
+    question: "Where does the Mojito originate from?",
+    optionA: "Africa",
+    optionB: "Australia",
+    optionC: "Brazil",
+    optionD: "Cuba",
+    correctOption: "optionD"
   },
-  
-  
-  
-  ]
+  {
+    question: "Which cocktail shares its name with a fancy piece of clothing?",
+    optionA: "Scarf",
+    optionB: "Shoes",
+    optionC: "Necklace",
+    optionD: "Tuxedo",
+    correctOption: "optionD"
+  },
+  {
+    question: "From which country is Pisco Sour?",
+    optionA: "Columbia",
+    optionB: "Peru",
+    optionC: "Brazil",
+    optionD: "Mexico",
+    correctOption: "optionB"
+  },
+  {
+    question: "A John Collins is a blank kind of drink?",
+    optionA: "long",
+    optionB: "medium",
+    optionC: "short",
+    optionD: "extra short",
+    correctOption: "optionA"
+  },
+  {
+    question: "What is a Mimosa made of?",
+    optionA: "Apple juice and Orange juice",
+    optionB: "Orange Juice and Gin",
+    optionC: "Orange juice and Champagne",
+    optionD: "Campange and Apple juice",
+    correctOption: "optionC"
+  },
+  {
+    question: "What is a White Lady made of",
+    optionA: "Cognac, orange liqueur and lemon juice",
+    optionB: "Fresh Mint,Lime juice, Rum and Brown sugar",
+    optionC: "Sugar, spice and everything nice",
+    optionD: "Gin, Triple sec or cointreau, lemon juice and egg white",
+    correctOption: "optionD"
+  },
+  {
+    question: "What is the official cocktail of New Orleans",
+    optionA: "Sazerac",
+    optionB: "Margarita",
+    optionC: "Rusty Nail",
+    optionD: "Stinger",
+    correctOption: "optionA"
+  },
+  {
+    question: "Which is Brazil's national cocktail",
+    optionA: "Margarita",
+    optionB: "La lluvia",
+    optionC: "Caipiriha",
+    optionD: "Martini",
+    correctOption: "optionC"
+  },
+]
   
   let shuffledQuestions = [] //empty array to hold shuffled selected questions out of all available questions
   
@@ -360,34 +335,6 @@ function startQuiz () {
       document.getElementById('option-modal').style.display = "none"
   }
   
-  =======
-  fetch("https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=%3CREQUIRED%3E&lon=%3CREQUIRED%3E", {
-      "method": "GET",
-      "headers": {
-          "x-rapidapi-host": "trailapi-trailapi.p.rapidapi.com",
-          "x-rapidapi-key": "71f6b4f193msh561e6e4b6552ca5p13ba72jsne8db3c8baa6c"
-      }
-  })
-  .then(response => {
-      console.log(response);
-  })
-  .catch(err => {
-      console.error(err);
-  });
-  
-  
-  
-  
-  // let url = 'trailapi-trailapi.p.rapidapi.com'
-  
-  
-  // fetch(url).then(function (res) { 
-  //     console.log(res)
-  // });
-
-
-
-
 
 ///////////////////////////////////////////////Benny////////////////////////////////////////
 fetch("https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=%3CREQUIRED%3E&lon=%3CREQUIRED%3E", {
