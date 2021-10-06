@@ -2,26 +2,6 @@
 var timerArea = document.getElementById("timer-area");
 
 
-// Global variables 
-var timerInterval;
-var secondsRemaining = 60;
-
-//timer for quiz 
-function startTimer(){
-  timerInterval = setInterval( function(){
-    timerArea.textContent = secondsRemaining + " seconds left";
-    secondsRemaining--;
-
-    if( secondsRemaining <0 ){
-      clearInterval(timerInterval);
-      checkForWonGame();
-    }
-  }, 1000)
-}
-startTimer();
- 
- 
-
  const questions = [
     {
 
@@ -180,8 +160,7 @@ function handleQuestions() {
 }
 
 
-let questionNumber = 1 //holds the current question number
-let playerScore = 0  //holds the player score
+let questionNumber = 1 //holds the current question numbe//holds the player score
 let wrongAttempt = 0 //amount of wrong answers picked by player
 let indexNumber = 0 //will be used in displaying next question
 
@@ -191,7 +170,6 @@ function NextQuestion(index) {
     handleQuestions()
     const currentQuestion = shuffledQuestions[index]
     document.getElementById("question-number").innerHTML = questionNumber
-    document.getElementById("player-score").innerHTML = playerScore
     document.getElementById("display-question").innerHTML = currentQuestion.question;
     document.getElementById("option-one-label").innerHTML = currentQuestion.optionA;
     document.getElementById("option-two-label").innerHTML = currentQuestion.optionB;
