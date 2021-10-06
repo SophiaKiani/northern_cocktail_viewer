@@ -1,94 +1,102 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-    <header>
-     <!-- nav Home  Explore (events) contact (Bot of page) RSVP (links to the form.html) -->
-    </header>
+    
+    <body onload="NextQuestion(0)">
+       
+        <main>
 
+            <h1>Cocktail Quiz &#128293</h1>
 
-    <section>
-        <!-- hero section main picture with ExploringMN Title and description -->
-    </section>
+            <!-- creating a modal for when quiz ends -->
+            <div class="modal-container" id="score-modal">
+    
+                <div class="modal-content-container">
+    
+                    <h1>Congratulations, Quiz Completed.</h1>
 
-    <section>
-      <h1>&#127864; Top 5 Drinks &#127865</h1>
-    </section>
-        <!-- Event Cards 5 Max  -->
-        <!-- Event card ==> picture, description, link to yelp, link to rsvp -->
-<div class="row textareas">
-    <div class="col-2 col-md-2 col-lg-2 pictureelement ">
-      <p>Picture</p>
-    </div>
-    <div class="col-8 col-md-8 col-lg-8 textareas">
-      <ul>content</ul>
-      </div>
-  </div>
-
-<div class="row textareas">
-    <div class="col-2 col-md-2 col-lg-2 pictureelement">
-      <p>Picture</p>
-    </div>
-    <div class="col-8 col-md-8 col-lg-8 textareas">
-      <ul>content</ul>
-    </div>
-</div>
-
-<div class="row textareas">
-  <div class="col-2 col-md-2 col-lg-2 pictureelement">
-    <p>Picture</p>
-  </div>
-  <div class="col-8 col-md-8 col-lg-8 textareas">
-    <ul>Picture</ul>
-</div>
-</div>
-
-<div class="row textareas">
-  <div class="col-2 col-md-2 col-lg-2 pictureelement">
-    <p>Picture</p>
-  </div>
-  <div class="col-8 col-md-8 col-lg-8 textareas">
-    <ul>Picture</ul>
-  </div>
-</div>
-
-<div class="row textareas">
-  <div class="col-2 col-md-2 col-lg-2 pictureelement">
-    <p>Picture</p>
-  </div>
-  <div class="col-8 col-md-8 col-lg-8 textareas">
-    <ul>Picture</ul>
-  </div>
-</div>
-   </section>
-
-
-    <footer>
-        <!-- Contact info add some links -->
-    </footer>
-
+                    <div class="grade-details">
+                        <p>Wrong Answers : <span id="wrong-answers"></span></p>
+                        <p>Right Answers : <span id="right-answers"></span></p>
+                        <p>Grade : <span id="grade-percentage"></span>%</p>
+                        <p ><span id="remarks"></span></p>
+                    </div>
+    
+                    <div class="modal-button-container">
+                        <button onclick="closeScoreModal()">Continue</button>
+                    </div>
+    
+                </div>
+            </div>
+    <!-- end of modal of quiz details-->
+    
+            <div class="game-quiz-container">
+    
+                <div class="game-details-container">
+                    <h1>Score : <span id="player-score"></span> / 5</h1>
+                    <h1> Question : <span id="question-number"></span> / 5</h1>
+                </div>
+    
+                <div class="game-question-container">
+                    <h1 id="display-question"></h1>
+                </div>
+    
+                <div class="game-options-container">
+    
+                   <div class="modal-container" id="option-modal">
+    
+                        <div class="modal-content-container">
+                             <h1>Please Pick An Option</h1>
+    
+                             <div class="modal-button-container">
+                                <button onclick="closeOptionModal()">Continue</button>
+                            </div>
+    
+                        </div>
+    
+                   </div>
+    
+                    <span>
+                        <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+                        <label for="option-one" class="option" id="option-one-label"></label>
+                    </span>
+    
+    
+                    <span>
+                        <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+                        <label for="option-two" class="option" id="option-two-label"></label>
+                    </span>
+    
+    
+                    <span>
+                        <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+                        <label for="option-three" class="option" id="option-three-label"></label>
+                    </span>
+    
+    
+                    <span>
+                        <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+                        <label for="option-four" class="option" id="option-four-label"></label>
+                    </span>
+    
+    
+                </div>
+    
+                <div class="next-button-container">
+                    <button onclick="handleNextQuestion()">Next Question</button>
+                </div>
+    
+            </div>
+        </main>
+        <script src="assets/js/main.js"></script>
+    </body>
 </body>
 </html>
-
-
+</html>
