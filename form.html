@@ -27,26 +27,36 @@
 
 <body>
   <h1>Drink list</h1>
-  <div id="drink-list"></div> <!-- = shop-list -->
+  <div id="drink-list"></div>
 
   <h1>Add Item</h1>
-  <form id="ingredient-add"> <!-- = shop-add -->
-    <input type="text" id="drink-item" placeholder="New ingredient" required value=""> <!-- = shop-item-->
+  <form id="ingredient-add">
+    <input type="text" id="drink-item" placeholder="New ingredient" required value=""> 
+    
     <input type="submit" id="ingredient-add-btn" value="Add Item"><br>
-    <label for="drink-name">What is your drinks unique name?</label><br>
+    <label for="drink-name">What is your drinks unique name?</label> 
+    <br>
+    <button id="name-submit">Add Item</button>
     <input type="text" id="drink-name" name="drink-name"><br>
-    <label for="instructions">Please place assembly instructions here</label><br>
-    <input type="text">
+    <label for="instructions">Please place assembly instructions here</label>
+    <br>
+    <button id="instruction-button">Add Instructions</button>
+    <input type="text"><br>
+    <button>submit</button>
   </form>
-
+  <form id="name">
+        <label for="drink-name">What is your drinks unique name?</label> 
+    <br>
+    <button id="name-submit">Add Item</button>
+    <input type="text" id="drink-name" name="drink-name"><br>
+  </form>
 <ul id="ilist.add">
   
 </ul>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 
   <script src="./assets/js/main.js"></script>
 </body>
-
-
 
 </html>
 
