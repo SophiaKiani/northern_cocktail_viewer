@@ -1,0 +1,12 @@
+.no-wrap {
+    color: gray;
+    background-color: whitesmoke;
+    border-bottom: 1px solid gray;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.no-wrap * {
+    color: gray;
+    text-decoration: none;
+}
