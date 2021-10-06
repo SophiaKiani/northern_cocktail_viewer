@@ -407,6 +407,9 @@ fetch("https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=%3CREQUIRED%
 
 
 
+// let url = 'trailapi-trailapi.p.rapidapi.com'
 
 
-
+// fetch(url).then(function (res) { 
+//     console.log(res)
+// });
