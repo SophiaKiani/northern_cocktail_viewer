@@ -49,7 +49,7 @@ var secondsRemaining = 60;
 //timer for quiz 
 function startTimer(){
   timerInterval = setInterval( function(){
-    timerArea.textContent = secondsRemaining + " seconds left";
+    //timerArea.textContent = secondsRemaining + " seconds left";
     secondsRemaining--;
   
     if( secondsRemaining <0 ){
@@ -337,19 +337,19 @@ const questions = [
   
 
 ///////////////////////////////////////////////Benny////////////////////////////////////////
-fetch("https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=%3CREQUIRED%3E&lon=%3CREQUIRED%3E", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "trailapi-trailapi.p.rapidapi.com",
-		"x-rapidapi-key": "71f6b4f193msh561e6e4b6552ca5p13ba72jsne8db3c8baa6c"
-	}
-})
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.error(err);
-});
+// fetch("https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=%3CREQUIRED%3E&lon=%3CREQUIRED%3E", {
+// 	"method": "GET",
+// 	"headers": {
+// 		"x-rapidapi-host": "trailapi-trailapi.p.rapidapi.com",
+// 		"x-rapidapi-key": "71f6b4f193msh561e6e4b6552ca5p13ba72jsne8db3c8baa6c"
+// 	}
+// })
+// .then(response => {
+// 	console.log(response);
+// })
+// .catch(err => {
+// 	console.error(err);
+// });
 
 
 
