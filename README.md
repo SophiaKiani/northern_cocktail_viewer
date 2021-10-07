@@ -22,13 +22,13 @@
 
 # Screen Shot
 `
-    ![Preview Of Sophk Online Daily Planner webpage](./assets/images/screenshot.png)
+    ![Preview Of Northern Cocktail Viewer webpage](./assets/images/screenshot.png)
 
     
 # Link
 `
-    [Check out Sophk Online Daily Planner webpage...](https://soph-k.github.io/sophk_online_daily_planner/)
-    [Or check out the GitHub repository for the Sophk Online Daily Planner webpage](https://github.com/soph-k/sophk_online_daily_planner) 
+    [Check out Northern Cocktail Viewer webpage...](https://github.com/soph-k/group_project_1)
+    [Or check out the GitHub repository for the Northern Cocktail Viewer webpage](https://soph-k.github.io/group_project_1/) 
     
  
 # Bugs

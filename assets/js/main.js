@@ -249,6 +249,7 @@ const submitBtnEl = $(".submit_recipe");
 const submitFormSection = $(".submit_thanks");
 const submitFormBtnArea = $(".element_submit_button");
 const submitFormRecipeCard = $('.form_card_recipe_section');
+const submitFormRecipeCard1 = $(".form_card_1")
 
 var ilist = {
   items: [],
@@ -272,6 +273,19 @@ var ilist = {
     ilist.items = JSON.parse(localStorage.items);
   }
 }
+$("#button-addon1-name").click(() => {
+  $("#builder-card h4").text($("#in-addon1-name").val());
+})
+
+$("#button-addon1-ingredient").click(() => {
+  $("#ilist-add").append(`
+  <li class="list-group-item">${$("#in-addon1-ingredient").val()}</li>
+  `);
+})
+
+$("#button-addon1-howto").click(() => {
+  $("#builder-card p").text($("#in-addon1-howto").val());
+})
 
 window.addEventListener("DOMContentLoaded", ilist.init);
 
@@ -280,6 +294,7 @@ function submitRecipe () {
   addFormSection.addClass('hidden');
   submitFormBtnArea.addClass('hidden');
   submitFormRecipeCard.addClass('hidden');
+  submitFormRecipeCard1.addClass('hidden')
 }
 
 // Event Listener for Form
