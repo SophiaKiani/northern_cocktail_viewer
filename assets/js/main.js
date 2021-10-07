@@ -165,6 +165,21 @@ let shuffledQuestions = []
 let questionNumber = 1
 let indexNumber = 0
 
+function tabSelectionQuiz() {
+  formContainer.addClass('hidden');
+  quizContainer.removeClass('hidden');
+  formTabBtn.removeClass('active');
+  quizTabBtn.addClass('active');
+  $("#resultz").removeClass('hidden')
+}
+
+function tabSelectionForm() {
+  formContainer.removeClass('hidden');
+  formTabBtn.addClass('active');
+  quizTabBtn.removeClass('active');
+  quizContainer.addClass('hidden');
+  $("#resultz").addClass('hidden')
+}
 
 // Functions
 function startQuiz() {
