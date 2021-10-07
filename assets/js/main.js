@@ -1,13 +1,42 @@
-///////////////////////////////////////////// Quiz Section //////////////////////////////////////
+///////////////////////////////////////////// Tab Section //////////////////////////////////////
+// Global Variables
 const quizTabBtn = $("#quiz-tab");
 const formTabBtn = $("#form_tab");
 const quizContainer = $("#quiz");
 const formContainer = $("#form");
+const addFormSection = $(".add_form")
+const quizResultSection = $("#results_section");
+
+// Functions
+function tabSelectionQuiz() {
+  formContainer.addClass('hidden');
+  quizContainer.removeClass('hidden');
+  formTabBtn.removeClass('active');
+  quizTabBtn.addClass('active');
+}
+
+function tabSelectionForm() {
+  addFormSection.removeClass('hidden');
+  formContainer.removeClass('hidden');
+  formTabBtn.addClass('active');
+  quizTabBtn.removeClass('active');
+  quizContainer.addClass('hidden');
+  quizResultSection.addClass('hidden')
+}
+
+// Event Listeners
+quizTabBtn.click(tabSelectionQuiz);
+formTabBtn.click(tabSelectionForm);
+
+
+
+///////////////////////////////////////////// Quiz Section //////////////////////////////////////
+// Global Variables
 const quizWelcomeSection = $(".welcome_section");
 const quizQuestionSection = $(".quiz_section")
 const startBtnEl = $(".start_btn");
 const restartBtnEl = $(".restart_btn");
-const nextBtnEl = $(".next-button-container")
+const nextBtnEl = $(".next-button-container");
 
 const questions = [
   {
@@ -136,27 +165,12 @@ let shuffledQuestions = []
 let questionNumber = 1
 let indexNumber = 0
 
-function tabSelectionQuiz() {
-  formContainer.addClass('hidden');
-  quizContainer.removeClass('hidden');
-  formTabBtn.removeClass('active');
-  quizTabBtn.addClass('active');
-  $("#resultz").removeClass('hidden')
 
-}
-
-function tabSelectionForm() {
-  formContainer.removeClass('hidden');
-  formTabBtn.addClass('active');
-  quizTabBtn.removeClass('active');
-  quizContainer.addClass('hidden');
-  $("#resultz").addClass('hidden')
-
-}
-
+// Functions
 function startQuiz() {
   quizWelcomeSection.addClass('hidden');
   quizQuestionSection.removeClass('hidden');
+  quizResultSection.addClass('hidden');
   NextQuestion(0);
 }
 
@@ -170,75 +184,57 @@ function handleQuestions() {
 }
 
 function NextQuestion() {
-  unCheckRadioButtons()
-  handleQuestions()
-
-
+  unCheckRadioButtons ();
+  handleQuestions ();
   if (questionNumber == 6) {
-    generateRecipe();
-    quizQuestionSection.addClass('hidden');
-    $("#resultz").removeClass("hidden");
-    fillQuizCard();
+    generateRecipe ();
   } else {
     const currentQuestion = shuffledQuestions[questionNumber - 1];
-
     $("#question-number").text(questionNumber);
     $("#display-question").text(currentQuestion.question);
     $("#option-one-label").text(currentQuestion.optionA);
     $("#option-two-label").text(currentQuestion.optionB);
     $("#option-three-label").text(currentQuestion.optionC);
     $("#option-four-label").text(currentQuestion.optionD);
-
     questionNumber++;
   }
-
 }
 
-function handleNextQuestion() {
-  checkForAnswer() //check if player picked right or wrong option
-  unCheckRadioButtons()
-  //delays next question displaying for a second just for some effects so questions don't rush in on player
-  setTimeout(() => {
-    if (indexNumber <= 4) {
-      //displays next question as long as index number isn't greater than 9, remember index number starts from 0, so index 9 is question 10
-      NextQuestion(indexNumber)
-    }
-    else {
-      generateRecipe()//ends game if index number greater than 9 meaning we're already at the 10th question
-    }
-    resetOptionBackground()
-  }, 1000);
-}
-
-//sets options background back to null after display the right/wrong colors
-function resetOptionBackground() {
-  const options = document.getElementsByName("option");
-  options.forEach((option) => {
-    document.getElementById(option.labels[0].id).style.backgroundColor = ""
-  })
-}
-
-// unchecking all radio buttons for next question(can be done with map or foreach loop also)
 function unCheckRadioButtons() {
   const options = document.getElementsByName("option");
   for (let i = 0; i < options.length; i++) {
     options[i].checked = false;
   }
 }
+
 function generateRecipe() {
-  fillCards();
+  fillQuizCard ();
+  quizQuestionSection.addClass('hidden');
+  quizResultSection.removeClass("hidden");
 }
 
+function fillQuizCard() {
+  randomDrink().then(data => {
+    let ingredientsList = data.ingredients
+    $(`#quizCard h4`).text(data.name)
+    $(`#quizCard p`).text(`Type: ${data.category}, ${data.isAlcoholic}, Served in: ${data.glassType}`)
+    for (let j = 0; j < ingredientsList.length; j++) {
+      $(`#quizCard ul`).append(`
+        <li class="list-group-item">${ingredientsList[j]}</li>
+      `);
+     }
+  });
+}
 
 // Quiz Event Listeners
-quizTabBtn.click(tabSelectionQuiz);
-formTabBtn.click(tabSelectionForm);
 startBtnEl.click(startQuiz);
-restartBtnEl.click(startQuiz);
 nextBtnEl.click(NextQuestion);
 
 
 ///////////////////////////////////////////// Form Section //////////////////////////////////////
+const submitBtnEl = $(".submit_recipe");
+const submitFormSection = $(".submit_thanks")
+
 var ilist = {
   items: [],
   dlist: null,
@@ -264,17 +260,23 @@ var ilist = {
 
 window.addEventListener("DOMContentLoaded", ilist.init);
 
+function submitRecipe () {
+  submitFormSection.removeClass('hidden');
+  addFormSection.addClass('hidden');
+}
+
+// Event Listener for Form
+submitBtnEl.click(submitRecipe);
+
 
 ///////////////////////////////////////////// API Section //////////////////////////////////////
 
 // Returns a random number min - max
-
 function random(min, max) {
   return Math.floor(Math.random() * ((max) - min) + min);
 }
 
 // Make a drink object from JSON 
-
 function drinkFromJson(json) {
   // Get ingredients (API displays ingredients weird)
   let ingredientsList = []
@@ -298,25 +300,20 @@ function drinkFromJson(json) {
 }
 
 // Get drink by name
-
 function drinkByName(strName) {
   url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${strName}`;
   return fetch(url).then(res => res.json()).then(data => { return drinkFromJson(data.drinks[0]); });
 }
 
 // Get random drink
-
 function randomDrink() {
   let url = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
   return fetch(url).then(res => res.json()).then(data => { return drinkFromJson(data.drinks[0]); });
 }
 
 // Get drink by ingredient
-
 function drinkByIngredient(strIngredient) {
-
   let url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${strIngredient}`;
-
   return fetch(url).then(res => res.json()).then(data => {
     let drinkList = data.drinks;
     let randomDrink = drinkList[random(0, drinkList.length)];
@@ -325,14 +322,12 @@ function drinkByIngredient(strIngredient) {
 }
 
 // Fill front page cards
-
 function fillCards() {
   let drinkNames = JSON.parse(localStorage.getItem("dailyDrinks"));
   const drinkTypes = ["vodka", "whiskey", "tequila", "gin", "rum"]
   if (drinkNames && (localStorage.getItem("date") && moment().date() === parseInt(localStorage.getItem("date")))) {
     for (let i = 0; i < drinkNames.length; i++)
       drinkByName(drinkNames[i]).then(data => {
-
         let ingredientsList = data.ingredients
         $(`#${drinkTypes[i]} h4`).text(data.name)
         $(`#${drinkTypes[i]} p`).text(`Type: ${data.category}, ${data.isAlcoholic}, Served in: ${data.glassType}`)
@@ -346,7 +341,6 @@ function fillCards() {
     let dailyDrinks = ["", "", "", "", ""]
     for (let i = 0; i < drinkTypes.length; i++) {
       drinkByIngredient(drinkTypes[i]).then(data => {
-
         let ingredientsList = data.ingredients;
         $(`#${drinkTypes[i]} h4`).text(data.name);
         $(`#${drinkTypes[i]} p`).text(`Type: ${data.category}, ${data.isAlcoholic}, Served in: ${data.glassType}`);
@@ -365,23 +359,3 @@ function fillCards() {
 
 fillCards();
 
-// Fills the quiz card
-
-function fillQuizCard() {
-
-  randomDrink().then(data => {
-
-    let ingredientsList = data.ingredients
-
-    $(`#quizCard h4`).text(data.name)
-
-    $(`#quizCard p`).text(`Type: ${data.category}, ${data.isAlcoholic}, Served in: ${data.glassType}`)
-
-    for (let j = 0; j < ingredientsList.length; j++) {
-      $(`#quizCard ul`).append(`
-  <li class="list-group-item">${ingredientsList[j]}</li>
-  `);
-    }
-
-  });
-}
