@@ -10,7 +10,6 @@ CSS TABLE OF CONTENTS
     |-- 7.0 - Responsive
 ********************************************************************************/
 
-
 /********************************** 1.0 - Reset ********************************/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -65,6 +64,11 @@ table {
 	border-spacing: 0;
 }
 
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
 
 /***************************** 2.0 - Global ******************************/
 * {
@@ -183,7 +187,7 @@ html {
 
 
 /******************************* 5.0 - Quiz ***************************/
-.drink_of_day_title, .team_title {
+.drink_of_day_title, .quiz_title, .team_title {
   padding: 0 0 0 3em;
   background-image:linear-gradient(to right, rgba(255, 255, 255, 0.925) , rgba(156, 170, 173, 0.514), rgb(255, 255, 255, 0.925));
   border-bottom: 1px black solid;
@@ -194,15 +198,15 @@ html {
   margin: 6em auto 2em;
 }
 
-.drink_of_day_title, .team_title p {
+.drink_of_day_title, .quiz_title, .team_title p {
   text-align: center;
   font-size: 1.5em;
   font-weight: 100;
   padding: .5em 1em .5em 1em;
 }
 
-.drinks_of_day {
-  margin: 4em 3em 7em;
+#drinks_of_day {
+  margin: 4em auto 7em;
   display: flex;
   justify-content: center;
 }
@@ -210,7 +214,7 @@ html {
 .drink_of_day_section, .about_us_section {
   border-top:rgb(110, 185, 179) 2px solid;
   border-bottom:rgb(97, 168, 162) .95em solid; 
-  margin: 3em 2em;
+  margin: 3em 1.5em;
   padding: 2em 1em;
   width: 18rem;
 }
@@ -222,6 +226,10 @@ html {
 
 
 /******************************* 5.0 - Quiz ***************************/
+.quiz_title {
+  margin: 1em auto;
+}
+
 #quiz_background {
   position: relative;
   width: 100%;
@@ -386,6 +394,11 @@ html {
 
 .tab_section_body {
   height: 30em;
+
+}
+
+.card_header_style {
+  background-color: rgb(97, 168, 162, .2);
 }
 
 
