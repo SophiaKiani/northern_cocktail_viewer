@@ -195,6 +195,7 @@ html {
 
 /******************************* 5.0 - Drinks of the Day ***************************/
 .drink_of_day_title, .quiz_title, .team_title {
+  position: relative;
   padding: 0 0 0 3em;
   background-image:linear-gradient(to right, rgba(255, 255, 255, 0.925) , rgba(156, 170, 173, 0.514), rgb(255, 255, 255, 0.925));
   border-bottom: 1px black solid;
@@ -256,6 +257,10 @@ html {
   justify-content: space-between;
 }
 
+.submit_thanks {
+  display: block;
+  margin: 3em;
+}
 .element_submit_button {
   width: 100%;
 }
