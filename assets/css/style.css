@@ -8,9 +8,7 @@ CSS TABLE OF CONTENTS
     |-- 5.0 - Project
     |-- 6.0 - Footer
     |-- 7.0 - Responsive
-
 ********************************************************************************/
-
 
 /********************************** 1.0 - Reset ********************************/
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -66,6 +64,11 @@ table {
 	border-spacing: 0;
 }
 
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
 
 /***************************** 2.0 - Global ******************************/
 * {

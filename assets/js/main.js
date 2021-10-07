@@ -234,12 +234,18 @@ var ilist = {
 		  document.getElementById('ilist.add').appendChild(listitem);
 		//   console.log(ilist.iadd);
 	  })// where method is, define function method, is add now will become push
-
+	  
 	  if (localStorage.items == undefined) {localStorage.items = "[]"; }
 	  ilist.items = JSON.parse(localStorage.items);
 
 	}
   }
+
+  window.addEventListener("DOMContentLoaded", ilist.init);
+
+	  if (localStorage.items == undefined) {localStorage.items = "[]"; }
+	  ilist.items = JSON.parse(localStorage.items);
+
 
   window.addEventListener("DOMContentLoaded", ilist.init);
 
