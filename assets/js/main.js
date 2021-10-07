@@ -142,7 +142,6 @@ function tabSelectionQuiz() {
   formTabBtn.removeClass('active');
   quizTabBtn.addClass('active');
   $("#resultz").removeClass('hidden')
-
 }
 
 function tabSelectionForm() {
@@ -151,7 +150,6 @@ function tabSelectionForm() {
   quizTabBtn.removeClass('active');
   quizContainer.addClass('hidden');
   $("#resultz").addClass('hidden')
-
 }
 
 function startQuiz() {
