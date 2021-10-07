@@ -295,18 +295,18 @@
             </div>
             <h2>First: Enter in your drinks name then hit "Add Item"</h2>
             <div class="input-group mb-3">
-              <button class="btn_2 btn-outline-secondary" type="button" id="button-addon1">Add Item</button>
-              <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+              <button class="btn_2 btn-outline-secondary" type="button" id="button-addon1-name">Add Item</button>
+              <input type="text" class="form-control" id="in-addon1-name" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1"></input>
             </div>
             <h2>Second: Enter in your drinks ingredients. Be sure to hit "Add Item" after every new item</h2>
             <div class="input-group mb-3">
-              <button class="btn_2 btn-outline-secondary" type="button" id="button-addon1">Add Item</button>
-              <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+              <button class="btn_2 btn-outline-secondary" type="button" id="button-addon1-ingredient">Add Item</button>
+              <input type="text" class="form-control" placeholder="" id="in-addon1-ingredient" aria-label="Example text with button addon" aria-describedby="button-addon1">
             </div>
             <h2>Third: Tell us how you made it. We're super excited to share your creation!!</h2>
             <div class="input-group mb-3">
-              <button class="btn_2 btn-outline-secondary" type="button" id="button-addon1">Add Item</button>
-              <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+              <button class="btn_2 btn-outline-secondary" type="button" id="button-addon1-howto">Add Item</button>
+              <input type="text" class="form-control" placeholder="" id="in-addon1-howto" aria-label="Example text with button addon" aria-describedby="button-addon1">
             </div>
             <h2>Fourth: Feel free to add a lovely picture of your creation</h2>
             <div class="mb-3">
@@ -318,7 +318,7 @@
           <section>
             <div class="form_card">
       
-              <div class="card drink_of_day_section mb-3 " id="quizCard">
+              <div class="card drink_of_day_section mb-3 " id="builder-card">
               <div class="card-body">
                 <h5 class="card-title drink_of_day_label">YOUR RECIPE</h5>
                 <h4 class="card-title"></h4>
@@ -326,14 +326,14 @@
                   
                 </p>
               </div>
-              <ul id="ilist.add"></ul>
+              <ul id="ilist-add"></ul>
               <ul class="list-group list-group-flush"></ul>
             </div>
             <div id="drink-list"></div>
-            <form id="ingredient-add">
+            <!-- <form id="ingredient-add">
               <input type="text" id="drink-item" placeholder="New Item" required value="">
               <input type="submit" id="ingredient-add-btn" value="Add Item"><br>
-            </form>
+            </form> -->
             </div>
             <ul id="ilist.add"></ul>
             <h2>Don't forget to drink responsibly!</h2>
