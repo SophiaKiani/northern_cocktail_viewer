@@ -193,7 +193,7 @@ html {
 }
 
 
-/******************************* 5.0 - Quiz ***************************/
+/******************************* 5.0 - Drinks of the Day ***************************/
 .drink_of_day_title, .quiz_title, .team_title {
   padding: 0 0 0 3em;
   background-image:linear-gradient(to right, rgba(255, 255, 255, 0.925) , rgba(156, 170, 173, 0.514), rgb(255, 255, 255, 0.925));
@@ -256,13 +256,37 @@ html {
   justify-content: space-between;
 }
 
+.element_submit_button {
+  width: 100%;
+}
 
 .quiz_card_result {
   display: flex;
   justify-content: center;
 }
 
+.welcome h2 {
+  font-size: 2em;
+  margin: 4em 2em;
+}
 
+.quiz_section {
+  margin: 1em 0;
+}
+
+.game-container-detail h1 {
+  font-size: 1.1em;
+}
+
+#display-question {
+  font-size: 1.2em;
+  margin: 2em auto;
+}
+
+.option {
+  font-size: 1.2em;
+  margin: 2em auto;
+}
 
 
 /******************************* 5.0 - Form ****************************/

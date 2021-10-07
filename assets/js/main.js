@@ -10,7 +10,7 @@ const quizResultSection = $("#results_section");
 // Functions
 function tabSelectionQuiz() {
   formContainer.addClass('hidden');
-  quizContainer.removeClass('hidden');
+  quizQuestionSection.removeClass('hidden');
   formTabBtn.removeClass('active');
   quizTabBtn.addClass('active');
 }
@@ -248,7 +248,9 @@ nextBtnEl.click(NextQuestion);
 
 ///////////////////////////////////////////// Form Section //////////////////////////////////////
 const submitBtnEl = $(".submit_recipe");
-const submitFormSection = $(".submit_thanks")
+const submitFormSection = $(".submit_thanks");
+const submitFormBtnArea = $(".element_submit_button");
+const submitFormRecipeCard = $('.form_card_recipe_section');
 
 var ilist = {
   items: [],
@@ -278,6 +280,8 @@ window.addEventListener("DOMContentLoaded", ilist.init);
 function submitRecipe () {
   submitFormSection.removeClass('hidden');
   addFormSection.addClass('hidden');
+  submitFormBtnArea.addClass('hidden');
+  submitFormRecipeCard.addClass('hidden');
 }
 
 // Event Listener for Form

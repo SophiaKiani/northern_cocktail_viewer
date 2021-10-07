@@ -229,19 +229,19 @@
             </div>
             <div class="game-options-container">
               <div class="modal-container" id="option-modal">
-                <span>
+                <span class="column question_styling">
                   <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
                   <label for="option-one" class="option" id="option-one-label"></label>
                 </span>
-                <span>
+                <span class="column question_styling">
                   <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
                   <label for="option-two" class="option" id="option-two-label"></label>
                 </span>
-                <span>
+                <span class="column question_styling">
                   <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
                   <label for="option-three" class="option" id="option-three-label"></label>
                 </span>
-                <span>
+                <span class="column question_styling">
                   <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
                   <label for="option-four" class="option" id="option-four-label"></label>
                 </span>
@@ -277,8 +277,7 @@
             <p>Drink Builder!</p>
           </div>
           <section class="add_form">
-            <div class=" form_elements">
-            
+            <div class=" form_elements">     
             <div class="name_form_group row">
               <div class="input-group name_form row mb-3">
                 <span class="input-group-text" id="basic-addon1">Full Name</span>
@@ -315,16 +314,11 @@
             </div>
             </div>
           </section>
-          <section>
-            <div class="form_card">
-      
-              <div class="card drink_of_day_section mb-3 " id="quizCard">
+          <section class="form_card_recipe_section">
+            <div class="form_card_recipe">
+              <div class="card drink_of_day_section mb-3 " id="builderCard">
               <div class="card-body">
                 <h5 class="card-title drink_of_day_label">YOUR RECIPE</h5>
-                <h4 class="card-title"></h4>
-                <p class="card-text">
-                  
-                </p>
               </div>
               <ul id="ilist.add"></ul>
               <ul class="list-group list-group-flush"></ul>
@@ -334,13 +328,12 @@
               <input type="text" id="drink-item" placeholder="New Item" required value="">
               <input type="submit" id="ingredient-add-btn" value="Add Item"><br>
             </form>
-            </div>
-            <ul id="ilist.add"></ul>
-            <h2>Don't forget to drink responsibly!</h2>
-            <button type="submit" class="submit_recipe">Send it!</button>
-            </div>
           </section>
-          <section class="submit_thanks hidden">
+          <section class="element_submit_button">
+            <h2>Don't forget to drink responsibly!</h2>
+            <button type="submit" class="submit_recipe btn">Send it!</button>
+          </section>
+          <section class="submit_thanks hidden column">
             <p>Thank you for submitting your secret recipe!</p>
           </section>
         </div>
