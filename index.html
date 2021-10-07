@@ -1,94 +1,373 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+
+  <link rel="stylesheet" href="./assets/css/style.css"/>
+
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'/>
+  
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <title>Home | Northern Cocktail Viewer</title>
 </head>
+
 <body>
-    <header>
-     <!-- nav Home  Explore (events) contact (Bot of page) RSVP (links to the form.html) -->
-    </header>
+  <header>
+    <nav class="navbar fixed-top nav-tabs nav_section">
+      <ul>
+        <li>
+          <a href="./index.html">HOME</a>
+        </li>
+        <li>
+          <a href="./about.html">ABOUT</a>
+        </li>
+        <li>
+          <a href="#contact">CONTACT</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-
-    <section>
-        <!-- hero section main picture with ExploringMN Title and description -->
-    </section>
-
-    <section>
-      <h1>&#127864; Top 5 Drinks &#127865</h1>
-    </section>
-        <!-- Event Cards 5 Max  -->
-        <!-- Event card ==> picture, description, link to yelp, link to rsvp -->
-<div class="row textareas">
-    <div class="col-2 col-md-2 col-lg-2 pictureelement ">
-      <p>Picture</p>
-    </div>
-    <div class="col-8 col-md-8 col-lg-8 textareas">
-      <ul>content</ul>
+  <section id="hero" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#hero" data-slide-to="0" class="active"></li>
+      <li data-target="#hero" data-slide-to="1"></li>
+      <li data-target="#hero" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div><img class="d-block img-fluid" src="./assets/images/hero_1.jpg" alt="First hero image slide"></div>
+        <div class="hero_inner_elements carousel-caption d-none d-md-block">
+          <div class="hero_title">
+            Northern Star Cocktail Viewer
+          </div>
+          <div class="hero_description">
+            Check Out Today's Hottest Recipes!
+          </div>
+          <div class="hero_button">
+            <button class="btn">
+              <a href="#drinks_of_day">Drinks of the Day</a>
+            </button>
+            <button class="btn">
+              <a href="#quiz">Try Out Recipe Quiz</a>
+            </button>
+          </div>
+        </div>
       </div>
-  </div>
+      <div class="carousel-item">
+        <div><img class="d-block img-fluid" src="./assets/images/hero_2.jpg" alt="Second hero image slide"></div>
+        <div class="carousel-caption d-none d-md-block">
+          <div class="hero_title">
+            Northern Star Cocktail Viewer
+          </div>
+          <div class="hero_description">
+            Check Out Today's Hottest Recipes!
+          </div>
+          <div class="hero_button">
+            <button class="btn">
+              Drinks of the Day
+            </button>
+            <button class="btn">
+              Recipe Quiz
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div><img class="d-block img-fluid" src="./assets/images/hero_3.jpg" alt="Third hero image slide"></div>
+        <div class="carousel-caption d-none d-md-block">
+          <div class="hero_title">
+            Northern Star Cocktail Viewer
+          </div>
+          <div class="hero_description">
+            Check Out Today's Hottest Recipes!
+          </div>
+          <div class="hero_button">
+            <button class="btn">
+              Drinks of the Day
+            </button>
+            <button class="btn">
+              Recipe Quiz
+            </button>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#hero" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#hero" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>  
+  </section>
 
-<div class="row textareas">
-    <div class="col-2 col-md-2 col-lg-2 pictureelement">
-      <p>Picture</p>
+  <section id="drinks_of_day">
+    <div class="drink_of_day_title">
+      <p>&#127864; Top 5 Drinks &#127865;</p>
     </div>
-    <div class="col-8 col-md-8 col-lg-8 textareas">
-      <ul>content</ul>
+    <div class="card-group justify-content-center">
+    <div class="row">
+      <div class="card drink_of_day_section mb-3" id="vodka">
+        <img class="card-img-top" src="./assets/images/vodka.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title drink_of_day_label">VODKA RECIPES</h5>
+          <h4 class="card-title">Recipe Name</h4>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+        </ul>
+      </div>
     </div>
-</div>
+    <div class="row">
+      <div class="card drink_of_day_section mb-3" id="whiskey">
+        <img class="card-img-top" src="./assets/images/whiskey.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title drink_of_day_label">WHISKEY RECIPES</h5>
+          <h4 class="card-title">Recipe Name</h4>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card drink_of_day_section mb-3" id="tequila">
+        <img class="card-img-top" src="./assets/images/tequila.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title drink_of_day_label">TEQUILA RECIPES</h5>
+          <h4 class="card-title">Recipe Name</h4>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card drink_of_day_section mb-3" id="gin">
+        <img class="card-img-top" src="./assets/images/gin.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title drink_of_day_label">GIN RECIPES</h5>
+          <h4 class="card-title">Recipe Name</h4>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card drink_of_day_section mb-3" id="rum">
+        <img class="card-img-top" src="./assets/images/rum.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title drink_of_day_label">RUM RECIPES</h5>
+          <h4 class="card-title">Recipe Name</h4>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<div class="row textareas">
-  <div class="col-2 col-md-2 col-lg-2 pictureelement">
-    <p>Picture</p>
-  </div>
-  <div class="col-8 col-md-8 col-lg-8 textareas">
-    <ul>Picture</ul>
-</div>
-</div>
+  <!-- <section class="drinks_of_day"> -->
+  <main class="card_tab_section card text-center">
+    <div class="card text-center">
+      <div class="column card-header card_header_style">
+        <ul class="nav nav-tabs card-header-tabs">
+          <li id="quiz-tab" class="nav-item nav-link active">
+            Find a New Recipe Quiz
+          </li>
+          <li id="form_tab" class="nav-item nav-link">
+            Submit Your Own Recipe
+          </li>
+        </ul>
+      </div>
+      <div class="card-body tab_section_body">
+        <div id="quiz" class="game-quiz-container">
+          <div class="quiz_title">Cocktail Quiz &#128293</div>
+          <section class="welcome_section">
+            <div class="welcome">
+              <h2>Welcome to Northern Cocktail Viewer Quiz! This quiz contains 5 questions, once answered a cocktail
+                recipe will be provide.
+                When you are ready press start.
+              </h2>
+            </div>
+            <div>
+              <button class="start_btn btn">START</button>
+            </div>
+          </section>
+          <section class="quiz_section hidden">
+            <div class="game-details-container">
+              <h1> Question : <span id="question-number"></span> / 5</h1>
+            </div>
+            <div class="row game-question-container">
+              <h1 id="display-question"></h1>
+            </div>
+            <div class="game-options-container">
+              <div class="modal-container" id="option-modal">
+                <span>
+                  <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+                  <label for="option-one" class="option" id="option-one-label"></label>
+                </span>
+                <span>
+                  <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+                  <label for="option-two" class="option" id="option-two-label"></label>
+                </span>
+                <span>
+                  <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+                  <label for="option-three" class="option" id="option-three-label"></label>
+                </span>
+                <span>
+                  <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+                  <label for="option-four" class="option" id="option-four-label"></label>
+                </span>
+                <div class="next-button-container">
+                  <button class="btn">Next Question</button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="results_section" class=" hidden">
+            <div class="modal-content-container">
+              <h1>Congratulations, Quiz Completed</h1>
+            </div>
+            <div class="quiz_card_result">
+            <div class="card drink_of_day_section mb-3 " id="quizCard">
+            <div class="card-body">
+              <h5 class="card-title drink_of_day_label">QUIZ RECIPES</h5>
+              <h4 class="card-title">Recipe Name</h4>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+            </div>
+              <ul class="list-group list-group-flush"></ul>
+            </div>
+            <!-- <div>
+              <button class="restart_btn">Restart</button>
+            </div> -->
+          </section>
+        </div>
+        <div id="form" class="hidden">
+        <div class=" d-flex flex-wrap justify-content-center">
+          <div class="quiz_title">
+            <p>Drink Builder!</p>
+          </div>
+          <section class="add_form">
+            <div class=" form_elements">
+            
+            <div class="name_form_group row">
+              <div class="input-group name_form row mb-3">
+                <span class="input-group-text" id="basic-addon1">Full Name</span>
+                <input type="text" class="form-control" placeholder="First Name" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group name_form row mb-3">
+                <span class="input-group-text" id="basic-addon1">Full Name</span>
+                <input type="text" class="form-control" placeholder="First Name" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Email Address</span>
+              <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            </div>
+            <h2>First: Enter in your drinks name then hit "Add Item"</h2>
+            <div class="input-group mb-3">
+              <button class="btn_2 btn-outline-secondary" type="button" id="button-addon1">Add Item</button>
+              <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+            </div>
+            <h2>Second: Enter in your drinks ingredients. Be sure to hit "Add Item" after every new item</h2>
+            <div class="input-group mb-3">
+              <button class="btn_2 btn-outline-secondary" type="button" id="button-addon1">Add Item</button>
+              <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+            </div>
+            <h2>Third: Tell us how you made it. We're super excited to share your creation!!</h2>
+            <div class="input-group mb-3">
+              <button class="btn_2 btn-outline-secondary" type="button" id="button-addon1">Add Item</button>
+              <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+            </div>
+            <h2>Fourth: Feel free to add a lovely picture of your creation</h2>
+            <div class="mb-3">
+              <label for="formFile" class="form-label"></label>
+              <input class="form-control" type="file" id="formFile">
+            </div>
+            </div>
+          </section>
+          <section>
+            <div class="form_card">
+      
+              <div class="card drink_of_day_section mb-3 " id="quizCard">
+              <div class="card-body">
+                <h5 class="card-title drink_of_day_label">YOUR RECIPE</h5>
+                <h4 class="card-title"></h4>
+                <p class="card-text">
+                  
+                </p>
+              </div>
+              <ul id="ilist.add"></ul>
+              <ul class="list-group list-group-flush"></ul>
+            </div>
+            <div id="drink-list"></div>
+            <form id="ingredient-add">
+              <input type="text" id="drink-item" placeholder="New Item" required value="">
+              <input type="submit" id="ingredient-add-btn" value="Add Item"><br>
+            </form>
+            </div>
+            <ul id="ilist.add"></ul>
+            <h2>Don't forget to drink responsibly!</h2>
+            <button type="submit" class="submit_recipe">Send it!</button>
+            </div>
+          </section>
+          <section class="submit_thanks hidden">
+            <p>Thank you for submitting your secret recipe!</p>
+          </section>
+        </div>
+      </div>
+  </main>
 
-<div class="row textareas">
-  <div class="col-2 col-md-2 col-lg-2 pictureelement">
-    <p>Picture</p>
-  </div>
-  <div class="col-8 col-md-8 col-lg-8 textareas">
-    <ul>Picture</ul>
-  </div>
-</div>
 
-<div class="row textareas">
-  <div class="col-2 col-md-2 col-lg-2 pictureelement">
-    <p>Picture</p>
-  </div>
-  <div class="col-8 col-md-8 col-lg-8 textareas">
-    <ul>Picture</ul>
-  </div>
-</div>
-   </section>
+  <footer id="contact">
+    <ul>
+      <li>Email: <a href="mailto:pcdearso@gmail.com">pcdearso@gmail.com</a></li>
+      <li>©2021 Northern Star Cocktail Company</li>
+      <li>Github: <a href="https://github.com/Soph-K/afljlkj" target="_blank">Check Me Out</a></li>
+    </ul>
+  </footer>
 
-
-    <footer>
-        <!-- Contact info add some links -->
-    </footer>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+  <script src="./assets/js/main.js">
+  </script>
 </body>
+
 </html>
-
-

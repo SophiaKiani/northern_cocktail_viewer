@@ -14,7 +14,3 @@ Javascript
 JQuery
 Animate.css
 
-
-img:
-
-
