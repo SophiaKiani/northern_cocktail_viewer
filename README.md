@@ -1,23 +1,34 @@
-# Description
+# Northern Cocktail Viewer 
 
-    Giving information to the user about new alcoholic beverages to try as well as pull from API and interpret data for drink recipes. Taking that and organizing the data so the users can come to our website and learn more about mixology. As well as get users to look at the adds for revenue theoretically.
+## Description
+
+    Giving information to the user about new alcoholic beverages to try as well as pull from API and interpret data for drink recipes. 
+    Taking that and organizing the data so the users can come to our website and learn more about mixology. 
+    As well as get users to look at the adds for revenue theoretically.
 
 
 # Features
 
-    Five question quiz, Drink form, About us
-
-    Tech stack: HTML CSS Javascript JQuery Animate.css
+    - HTML 
+    - CSS 
+    - Javascript 
+    - JQuery 
+    - Animate.css 
+    - Bootstrap
 
 
 # Authors
 
     Sophia (https://github.com/soph-k)
     Benny (https://github.com/Malletmania)
-    Bentura (https://github.com/BenturaPeralez)
-    Bentura 
+    Bentura Peralez  (https://github.com/BenturaPeralez)
+    Andrew Trudeau  (https://github.com/andrewtrudeau)
     Version 1.1
 
+
+# Link to Deployed Page
+`
+    [Northern Cocktail Viewer Webpage...](https://github.com/soph-k/group_project_1)
 
 
 # Screen Shot
@@ -25,11 +36,10 @@
     ![Preview Of Northern Cocktail Viewer webpage](./assets/images/screenshot.png)
 
     
-# Link
+# Link to Deployed Page
 `
-    [Check out Northern Cocktail Viewer webpage...](https://github.com/soph-k/group_project_1)
-    [Or check out the GitHub repository for the Northern Cocktail Viewer webpage](https://soph-k.github.io/group_project_1/) 
-    
+    [GitHub repository for the Northern Cocktail viewer webpage](https://soph-k.github.io/group_project_1/)
+
  
 # Bugs
 
