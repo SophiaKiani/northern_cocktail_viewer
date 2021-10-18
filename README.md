@@ -2,12 +2,13 @@
 
 ## Description
 
-    Giving information to the user about new alcoholic beverages to try as well as pull from API and interpret data for drink recipes. 
+    Giving information to the user about new alcoholic beverages to try as well as pull from API 
+    and interpret data for drink recipes. 
     Taking that and organizing the data so the users can come to our website and learn more about mixology. 
     As well as get users to look at the adds for revenue theoretically.
 
 
-# Features
+## Features
 
     - HTML 
     - CSS 
@@ -17,7 +18,7 @@
     - Bootstrap
 
 
-# Authors
+## Authors
 
     Sophia (https://github.com/soph-k)
     Benny (https://github.com/Malletmania)
@@ -26,21 +27,21 @@
     Version 1.1
 
 
-# Link to Deployed Page
+## Link to Deployed Page
 `
-    [Northern Cocktail Viewer Webpage...](https://github.com/soph-k/group_project_1)
+    [Live Demo](https://soph-k.github.io/northern_cocktail_viewer/)
 
 
-# Screen Shot
+## Screen Shot
 `
     ![Preview Of Northern Cocktail Viewer webpage](./assets/images/screenshot.png)
 
     
-# Link to Deployed Page
+## Link to Deployed Page
 `
-    [GitHub repository for the Northern Cocktail viewer webpage](https://soph-k.github.io/group_project_1/)
+    [Repo](https://github.com/soph-k/northern_cocktail_viewer)
 
  
-# Bugs
+## Bugs
 
     There are currently no known bugs within this file.
