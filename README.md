@@ -9,8 +9,10 @@
 <p align="center">
     <img src="https://img.shields.io/badge/HTML-yellow"/>
     <img src="https://img.shields.io/badge/CSS-gray"/>
+        <img src="https://img.shields.io/badge/Bootstrap-pink"/>
+    <img src="https://img.shields.io/badge/Animate.css-green"/>
     <img src="https://img.shields.io/badge/Javascript-red"/>
-    <img src="https://img.shields.io/badge/jQuery-blue" />
+    <img src="https://img.shields.io/badge/jQuery-blue"/>
 </p>
 
 
@@ -29,9 +31,6 @@ As well as get users to look at the adds for revenue theoretically.
 - [Demo](#linktodeployedpage)
 - [Preview](#preview)
 - [Repo](#linktodeployedrepo)
-- [Contribution](#contribution)
-- [License](#license)
-- [Bugs](#bugs)
 
 
 ## Authors
