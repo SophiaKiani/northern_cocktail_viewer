@@ -30,7 +30,7 @@ As well as get users to look at the adds for revenue theoretically.
 - [Features](#features)
 - [Demo](#linktodeployedpage)
 - [Preview](#preview)
-- [Repo](#link to deployed repo)
+- [Repo](#linktodeployedrepo)
 
 
 ## Authors
