@@ -34,11 +34,11 @@ As well as get users to look at the adds for revenue theoretically.
 
 
 ## Authors
--[Sophia](https://github.com/soph-k)
--[Benny](https://github.com/Malletmania)
--[Bentura Peralez](https://github.com/BenturaPeralez)
--[Andrew Trudeau](https://github.com/andrewtrudeau)
--Version 1.1
+- [Sophia](https://github.com/soph-k)
+- [Benny](https://github.com/Malletmania)
+- [Bentura Peralez](https://github.com/BenturaPeralez)
+- [Andrew Trudeau](https://github.com/andrewtrudeau)
+- Version 1.1
 
 
 ## Features
